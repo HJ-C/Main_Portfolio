@@ -4,9 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI';
-    transition: all .4s;
-    
+    /* transition: all .4s; */
+    list-style: none;
+}
+.menu a{
+  text-decoration: none;
 }
 
 /* card */
@@ -62,15 +64,16 @@ header .logo {
   bottom: 0; /* 컨테이너에서 0지점*/
   left: 0;
   margin: auto; /* top과 bottom이 0이므로 위아래 높이를 알아서 배치함, 그리고 높이값을 선언해줘야함*/
+  text-decoration-line: none;
 }
+/* 서브메뉴*/
 header .sub-menu {
   position: absolute;
-  top: 10px;
+  top: 0px;
   right: 0;
   display: flex;
 }
 header .sub-menu ul.menu {
-  font-family: Arial, sans-serif; /*첫번째 폰트없으면 뒷폰트(고딕체)*/
   display: flex;
 }
 header .sub-menu ul.menu li {
@@ -99,6 +102,8 @@ header .sub-menu ul.menu li a {
 header .sub-menu ul.menu li a:hover {
   color: #000;
 }
+
+/* 검색창*/
 header .sub-menu .search {
   position: relative;
   height: 34px;
@@ -114,7 +119,7 @@ header .sub-menu .search input {
   background-color: #fff;
   color : #777;
   font-size: 12px;
-  transition: width .4s; /*전환효과, 가로만 적용, 0.4초*/
+  transition: width .6s; /*전환효과, 가로만 적용, 0.4초*/
 }
 header .sub-menu .search input:focus {  /*인풋박스를 눌렀을때 동적인 명령어(focus)*/
   width: 190px;
@@ -132,15 +137,16 @@ header .sub-menu .search .material-icons {
 header .sub-menu .search.focused .material-icons { /*여기서 focuesd는 일치 선택자임*/
   opacity: 0; /*focused 될때 돋보기가 사라짐*/
 }
+
+/* 드롭다운 메인메뉴*/
 header .main-menu {
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   right: 0;
-  z-index: 1; /*드랍다윤 메뉴가 스크롤을 덮기위해 zindex사용*/
   display: flex;
 }
 header .main-menu .item .item__name {
-  padding: 10px 20px 34px 20px; /*드롭다운 메뉴 이름 패딩*/
+  padding: 20px 10px 34px 20px; /*드롭다운 메뉴 이름 패딩*/
   font-family: Arial, sans-serif;
   font-size: 13px;
 }
@@ -170,9 +176,10 @@ header .main-menu .item .item__contents .contents__menu > ul > li {
   width: 220px;
 }
 header .main-menu .item .item__contents .contents__menu > ul > li h4 {
-  padding: 3px 0 12px 0;
+  padding: 3px 50px 12px 0;
   font-size: 14px;
   color: #fff;
+  text-align: center;
 }
 header .main-menu .item .item__contents .contents__menu > ul > li ul li {
   padding: 5px 0;
@@ -183,16 +190,5 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li {
 header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
   color: #669900;
 }
-header .main-menu .item .item__contents .contents__texture {
-  padding: 26px 0;
-  font-size: 12px;
-  background-image: url("../images/main_menu_pattern.jpg");
-}
-header .main-menu .item .item__contents .contents__texture h4 {
-  color: #999;
-  font-weight: 900;
-}
-header .main-menu .item .item__contents .contents__texture p {
-  color: #64a70b;
-  margin: 4px 0 14px;
-}
+
+
