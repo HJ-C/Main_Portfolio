@@ -53,6 +53,7 @@
   border-bottom: 1px solid #c8c8c8; /*바텀 실선 이라 생각*/
   position: fixed; /*fixed나 absoulte는 너비가 최소한으로 시도함, 해결방법 : wdith를 %로 해라*/
   top:0;
+  z-index: 9;
 }
 header > .inner {  /*딱 헤더 부분의 크기, 자식선택자를 이용해서 정확히 범위표현*/
   height: 120px;
@@ -138,6 +139,8 @@ header .sub-menu .search.focused .material-icons { /*여기서 focuesd는 일치
   opacity: 0; /*focused 될때 돋보기가 사라짐*/
 }
 
+
+
 /* 드롭다운 메인메뉴*/
 header .main-menu {
   position: absolute;
@@ -192,3 +195,69 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
 }
 
 
+
+/* 슬라이드 */
+.slide__container {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.slide__text h2 {
+  font-size: 3.125rem;
+  font-weight: 400;
+  line-height: 3.6875;
+  margin-bottom: 1.125rem;
+  font-style: italic;
+  letter-spacing: -0.02em;
+}
+
+.slide .slide__list {
+  background: #2e2e2e;
+  padding: 5.625rem 0;
+}
+.slide .slide__list .slide__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.slide .slide__list .slide__container .col {
+  width: 50%;
+}
+.slide .slide__list .slide__container .col.img {
+  box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.slide .slide__list .slide__container .col .slide__text {
+  padding: 3.125rem;
+  padding-right: 0;
+}
+.slide .slide__list .slide__container .col .slide__text h2 {
+  color: #fff;
+}
+.slide .slide__list .slide__container .col .slide__text p {
+  color: rgba(255, 255, 255, 0.7);
+  padding-bottom: 1.125rem;
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.slide .slide__list .slide__container .col .slider {
+  width: 300%;
+  display: flex;
+}
+.slide .slide__list .slide__container .col .slider .slide {
+  width: 100%;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+.slide .slide__list .slide__container .col .slider .slide.foto1 {
+  background-image: url(../img/chef-1.jpg);
+}
+.slide .slide__list .slide__container .col .slider .slide.foto2 {
+  background-image: url(../img/chef-2.jpg);
+}
+.slide .slide__list .slide__container .col .slider .slide.foto3 {
+  background-image: url(../img/chef-3.jpg);
+}
