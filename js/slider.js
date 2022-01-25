@@ -1,4 +1,3 @@
-
 function start(){
 
     // Dom 선택
@@ -31,5 +30,3 @@ function start(){
     setSlide.init()
     }
     start()
-    
-    
