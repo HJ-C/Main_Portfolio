@@ -4,27 +4,50 @@
 	padding: 0;
 	box-sizing: border-box;
 	list-style: none;
-  }
-  body {
+}
+
+body {
 	font-size: 16px;
 	font-family: 'Playfair Display', serif;
 	color: #303133;
-  }
-  .container {
+
+}
+
+.container {
 	width: 90%;
 	max-width: 1080px;
 	margin: 0 auto;
-  }
-  img {
+}
+
+img {
 	vertical-align: top;
 	max-width: 100%;
-  }
-  a {
+}
+
+a {
 	text-decoration: none;
 	color: #303133;
 	transition: all 0.3s ease;
-  }
-
+}
+.bg{
+	position: relative;
+}
+.bg:after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(../images/배경2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100%;
+	opacity: 0.7;
+	z-index: -1;
+}
  /*INNER*/
  .inner {
 	width: 1100px; 
@@ -36,7 +59,7 @@
  /*HEADER*/
  header {
 	width: 100%; /*fixed를 하면 오토값이 최소넓이를 이용해서 빈공백이 나옴*/
-	background-color: #f6f5f0;
+	background-color: rgba(59, 59, 59, 0.2);
 	border-bottom: 1px solid #c8c8c8; /*바텀 실선 이라 생각*/
 	position: fixed; /*fixed나 absoulte는 너비가 최소한으로 시도함, 해결방법 : wdith를 %로 해라*/
 	top:0;
@@ -245,6 +268,7 @@
   }
   .main .main__box .container .container__menu {
 	margin-top: 2.5rem;
+	
   }
   .main .main__box .container .container__menu .menu {
 	font-weight: 600;
@@ -277,6 +301,7 @@
 	margin-top: 2.5rem;
 	border: 6px double #eaeaea;
 	padding: 0 2.25rem; 
+	background-color: #fff; /*투명도 주기-------------------------------*/
   }
   
   .main .main__box .container .text > div {
