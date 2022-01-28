@@ -10,9 +10,9 @@ window.onload = function () {
     function magnify () {
       let mask = null,
         magnify = null;
-      let maskParent = document.querySelector('.preview-wrap .preview .zoom');
-      let maskImg = document.querySelector('.preview-wrap .preview .zoom > img');
-      let magnifyParent = document.querySelector('.preview-wrap > .preview');
+      let maskParent = document.querySelector('.preview-wrap .zoom');
+      let maskImg = document.querySelector('.preview-wrap .zoom > img');
+      let magnifyParent = document.querySelector('.preview-wrap');
       maskImg.src = data.img[magnifyId].s;
   
       maskParent.addEventListener('mouseenter', function () {
@@ -47,7 +47,7 @@ window.onload = function () {
           mask.style.left = maskPosition.left + 'px'
           mask.style.top = maskPosition.top + 'px'
   
-          let imgWidth = document.querySelector('.preview-wrap > .preview .magnify img');
+          let imgWidth = document.querySelector('.preview-wrap .magnify img');
           let scale = (maskParent.clientWidth - mask.clientWidth) / (imgWidth.clientWidth - magnify.clientWidth);
           imgWidth.style.marginLeft = - maskPosition.left / scale + 'px';
           imgWidth.style.marginTop = - maskPosition.top / scale + 'px';

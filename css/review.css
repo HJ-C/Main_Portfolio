@@ -26,6 +26,7 @@ img {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 /* Small */
@@ -191,3 +192,10 @@ img {
 }
 
 
+/* 제목 이미지 */
+.s-img {
+    margin: -35px auto;
+    top: 46px;
+    left: 455px;
+    position: absolute;
+}
