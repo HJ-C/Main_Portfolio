@@ -23,7 +23,7 @@
 .home .home-caption
 {
     position: relative;
-    top: 95%;
+    top: 97%;
     transform: translateY(-50%);
 }
 .home h1
@@ -384,4 +384,5 @@ footer .info span:last-child{
   background-size: cover;
   height: 600px;
 }
+
 
